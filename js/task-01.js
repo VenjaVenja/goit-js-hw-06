@@ -1,27 +1,12 @@
-// const categoriesLiAll = document.querySelectorAll("li.item")
+const categoryEl = document.querySelector('#categories');
 
-// console.log(`Number of categorie: ${categoriesLiAll.length}`);
+console.log(`Number of categories:`, categoryEl.children.length);
 
-// const itemsEl = document.querySelectorAll('.item');
-// itemsEl.forEach((element) => {
-//     const titel = element.querySelector('h2').innerHTML;
-//     const itemLength = element.querySelectorAll('li').length;
-//     console.log(`Catagory: ${titel} / Elements: ${itemLength}`);
-// });
+const itemEl = document.querySelectorAll('.item');
+itemEl.forEach(element => {
+    const titel = element.querySelector('h2');
+    console.log(`Category: ${titel.textContent}`);
 
-const categoriesAll = document.querySelector('#categories');
-
-const liEtemsEl = categoriesAll.querySelectorAll('.item').length;
-
-console.log(`Number of categories: ${liEtemsEl}`);
-
-const titelEl = document.querySelectorAll('.item');
-titelEl.forEach((elem) => {
-    const titel = elem.querySelector('h2').innerHTML;
-    const itemLenght = elem.querySelectorAll('li').length;
-
-    console.log(`Category: ${titel}`);
-    console.log(`Elements: ${itemLenght}`);
-});
-
-
+    const number = element.querySelectorAll('li');
+    console.log(`Elements: ${number.length}`);
+})
